@@ -53,11 +53,11 @@ async function convertirMoneda() {
 }
 
 function intercambiarMonedas() {
-  // TODO · MISIÓN 06:
-  // 1) guardar temporalmente el valor de origen
-  // 2) intercambiar origen.value y destino.value
-  // 3) volver a calcular
-  mostrarError("Misión 06 pendiente: implementa el intercambio de monedas.");
+  const temporal = document.querySelector("#origen").value;
+  document.querySelector("#origen").value = document.querySelector("#destino").value;
+  document.querySelector("#destino").value = temporal;
+
+  convertirMoneda();
 }
 
 // 4. UTILIDADES DE INTERFAZ
