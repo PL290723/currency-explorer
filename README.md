@@ -1,13 +1,13 @@
 # Currency Explorer · Starter Project
 
 ## Integrantes
-- Estudiante A:
-- Estudiante B:
+- Estudiante A: Rivera Lara Paulo Cesar
+- Estudiante B: Melgar Obrajero Jairo Antonio
 
 ## Pair Programming
 | Misión | Driver | Navigator | Commit / evidencia |
 |---|---|---|---|
-| 04 | | | |
+| 04 |Paulo |Jairo | |
 | 05 | | | |
 | 06 | | | |
 | 07 | | | |
