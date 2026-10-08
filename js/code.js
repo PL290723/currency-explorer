@@ -19,9 +19,6 @@ btnIntercambiar.addEventListener("click", intercambiarMonedas);
 
 // 3. FUNCIÓN PRINCIPAL
 async function convertirMoneda() {
-  // Misiones guiadas 1-3: ya existe un flujo mínimo funcional EUR -> USD.
-  // A partir de la Misión 4 debes convertirlo en una solución dinámica.
-
   const valor = Number(cantidad.value);
 
   // TODO · MISIÓN 07: sustituir esta validación mínima por una validación completa.
@@ -30,9 +27,8 @@ async function convertirMoneda() {
     return;
   }
 
-  // MISIÓN 04: valores elegidos en los <select> de la interfaz.
-  const monedaOrigen = document.querySelector("#origen").value;
-  const monedaDestino = document.querySelector("#destino").value;
+  const monedaOrigen = origen.value;
+  const monedaDestino = destino.value;
 
   const url = `https://api.frankfurter.dev/v2/rate/${monedaOrigen}/${monedaDestino}`;
 
@@ -43,10 +39,10 @@ async function convertirMoneda() {
     // TODO · MISIÓN 09: comprobar response.ok y lanzar un error si corresponde.
     const datos = await respuesta.json();
 
-    const conversion = valor * datos.rate;
+    const conversion = (valor * datos.rate).toFixed(2);
 
     resultado.classList.remove("error");
-    resultadoTexto.textContent = `${valor.toFixed(2)} ${monedaOrigen} = ${conversion.toFixed(2)} ${monedaDestino}`;
+    resultadoTexto.textContent = `${valor.toFixed(2)} ${monedaOrigen} = ${conversion} ${monedaDestino}`;
     detalleTasa.textContent = `1 ${monedaOrigen} = ${datos.rate} ${monedaDestino} · ${datos.date}`;
 
   } catch (error) {
