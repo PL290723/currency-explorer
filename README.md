@@ -11,7 +11,7 @@
 | 05 |Jairo |Paulo |  |
 | 06 |Paulo |Jairo | |
 | 07 |Jairo |Paulo | |
-| 08 | | | |
+| 08 |Paulo |Jairo | |
 | 09 | | | |
 | 10 | | | |
 
