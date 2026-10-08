@@ -31,8 +31,12 @@ async function convertirMoneda() {
 
   const url = `https://api.frankfurter.dev/v2/rate/${monedaOrigen}/${monedaDestino}`;
 
+  // MISIÓN 08: activar el estado de carga antes de la petición.
+  resultadoTexto.textContent = "Consultando...";
+  detalleTasa.textContent = "Obteniendo la tasa de cambio...";
+  btnConvertir.disabled = true;
+
   try {
-    // TODO · MISIÓN 08: activar un estado visual de carga antes de consultar.
     const respuesta = await fetch(url);
 
     // TODO · MISIÓN 09: comprobar response.ok y lanzar un error si corresponde.
@@ -48,6 +52,9 @@ async function convertirMoneda() {
     // TODO · MISIÓN 09: mejora el mensaje y analiza qué errores pueden llegar aquí.
     mostrarError("No fue posible completar la consulta.");
     console.error(error);
+  } finally {
+    // MISIÓN 08: restaurar el botón al finalizar la consulta.
+    btnConvertir.disabled = false;
   }
 }
 
