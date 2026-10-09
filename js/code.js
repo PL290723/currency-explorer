@@ -39,7 +39,10 @@ async function convertirMoneda() {
   try {
     const respuesta = await fetch(url);
 
-    // TODO · MISIÓN 09: comprobar response.ok y lanzar un error si corresponde.
+    if (!respuesta.ok) {
+      throw new Error("Error en la consulta");
+    }
+
     const datos = await respuesta.json();
 
     const conversion = (valor * datos.rate).toFixed(2);
@@ -49,7 +52,6 @@ async function convertirMoneda() {
     detalleTasa.textContent = `1 ${monedaOrigen} = ${datos.rate} ${monedaDestino} · ${datos.date}`;
 
   } catch (error) {
-    // TODO · MISIÓN 09: mejora el mensaje y analiza qué errores pueden llegar aquí.
     mostrarError("No fue posible completar la consulta.");
     console.error(error);
   } finally {
@@ -78,5 +80,4 @@ function mostrarError(mensaje) {
 // destino.value       -> moneda seleccionada como destino
 // cantidad.value      -> texto escrito en el input
 // Number(...)         -> convierte texto a número
-// response.ok         -> indica si la respuesta HTTP fue satisfactoria
 // resultado.textContent -> permite modificar texto del DOM
