@@ -12,8 +12,8 @@
 | 06 |Paulo |Jairo | |
 | 07 |Jairo |Paulo | |
 | 08 |Paulo |Jairo | |
-| 09 | Jairo|Paulo | |
-| 10 | | | |
+| 09 |Jairo |Paulo | |
+| 10 |Paulo |Jairo | |
 
 ## Objetivo
 Completar una aplicación frontend que consuma Frankfurter API para convertir divisas y demostrar comprensión de eventos, DOM, `fetch()`, JSON, asincronía, validación y manejo de errores.
