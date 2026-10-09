@@ -7,12 +7,12 @@
 ## Pair Programming
 | Misión | Driver | Navigator | Commit / evidencia |
 |---|---|---|---|
-| 04 |Paulo |Jairo |  |
-| 05 |Jairo |Paulo |  |
+| 04 |Paulo |Jairo | |
+| 05 |Jairo |Paulo | |
 | 06 |Paulo |Jairo | |
 | 07 |Jairo |Paulo | |
-| 08 | | | |
-| 09 | | | |
+| 08 |Paulo |Jairo | |
+| 09 |Jairo |Paulo | |
 | 10 |Paulo |Jairo | |
 
 ## Objetivo
